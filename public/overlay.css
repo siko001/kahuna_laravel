@@ -1,0 +1,125 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.overlay-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.preview {
+	width: 100vw;
+	min-height: 400px;
+	height: 30%;
+	background-position: center center;
+	background-size: 100% 100%;
+	display: flex;
+	justify-items: center;
+	align-items: center;
+	position: fixed;
+	top: 20%;
+	left: 0;
+	display: none;
+	justify-content: center;
+	z-index: 9999; /* Ensure overlay is on top */
+}
+
+.bi-x-square:hover {
+	display: inline-block;
+	cursor: crosshair;
+	color: red;
+}
+.bi-check-square:hover {
+	display: inline-block;
+	cursor: crosshair;
+	color: green;
+}
+
+.display {
+	display: inline;
+}
+
+.glass {
+	margin: auto auto;
+	min-width: 60%;
+	width: 50%;
+	min-height: 300px;
+	height: 100%;
+	border-radius: 10px;
+
+	background: rgba(255, 255, 255, 0.35);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(13.5px);
+	-webkit-backdrop-filter: blur(13.5px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.hover-text {
+	opacity: 0; /* Initially hide the text */
+	transition: opacity 0.3s ease; /* Add transition effect */
+	color: white;
+}
+.social-share:hover .hover-text {
+	opacity: 1; /* Display the text when the div is hovered */
+	color: white;
+}
+.hover-text-delete {
+	opacity: 0; /* Initially hide the text */
+	transition: opacity 0.3s ease; /* Add transition effect */
+}
+
+#go-forward:hover + .display .hover-text-delete {
+	opacity: 1;
+}
+
+.hover-text-back {
+	opacity: 0; /* Initially hide the text */
+	transition: opacity 0.3s ease; /* Add transition effect */
+}
+#go-back:hover + .display .hover-text-back {
+	opacity: 1;
+}
+
+.spinner {
+	border: 8px solid #f3f3f3;
+	border-top: 8px solid #3498db;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+#spinner {
+	position: relative;
+	margin-top: 20px;
+	left: 180px;
+}
+
+.error {
+	color: red;
+	font-weight: bold;
+}
+.good {
+	color: green;
+	font-weight: bold;
+}
+
+.ss {
+	display: inline-block;
+	font-size: 11px;
+	font-weight: 450;
+}
