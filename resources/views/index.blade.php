@@ -61,7 +61,7 @@
 
 
                         @foreach ($products as $product)
-                            <div style="width: 300px; height: 580px;" class="owl-carousel-info-wrap item">
+                            <div style="width: 240px; min-height: 400px;" class="owl-carousel-info-wrap item media">
                                 <img src="{{ Storage::url($product->imgURL) }}" class="owl-carousel-image img-fluid"
                                     alt="" />
                                 <div class="owl-carousel-info">
